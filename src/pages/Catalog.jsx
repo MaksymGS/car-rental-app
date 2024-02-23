@@ -1,6 +1,9 @@
-import { CatalogList } from "components/Catalog/CatalogList";
-
+import { CatalogList } from 'components/Catalog/CatalogList';
 
 export default function Catalog() {
-    return <div><CatalogList/></div>;
-  }
+  return (
+    <div>
+      <CatalogList />
+    </div>
+  );
+}

@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from '../../redux/fetchingData.js';
 import { ItemCar } from 'components/ItemCar/ItemCar.jsx';
+import { ListWrapper } from './CatalogList.styled.js';
 
 export const CatalogList = () => {
   const dispatch = useDispatch();
-  const { isLoading, error, items } = useSelector(state => state.adverts);
-  console.log(items);
+  const { /*isLoading, error,*/ items } = useSelector(state => state.adverts);
+  // console.log(items);
 
   useEffect(() => {
     dispatch(fetchAdverts());
@@ -14,13 +15,11 @@ export const CatalogList = () => {
 
   return (
     <>
-      <ul>
-        {items.map(
-          ({ id, make, model, year, rentalPrice, address, rentalCompany }) => (
-            <ItemCar key={id} make={make} model={model} year={year}/>
-          )
-        )}
-      </ul>
+      <ListWrapper>
+        {items.map(item => (
+          <ItemCar key={item.id} item={item} />
+        ))}
+      </ListWrapper>
     </>
   );
 };

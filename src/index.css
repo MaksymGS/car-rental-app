@@ -1,15 +1,47 @@
-@import-normalize; /* bring in normalize.css styles */
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Manrope-Regular.ttf') format('truetype'); 
+ }
+ 
+ @font-face {
+   font-display: swap;
+   font-family: 'Manrope';
+   font-style: normal;
+   font-weight: 500;
+   src: url('./fonts/Manrope-Medium.ttf') format('truetype'); 
+  }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+ @font-face {
+   font-display: swap;
+   font-family: 'Manrope';
+   font-style: normal;
+   font-weight: 600;
+   src: url('./fonts/Manrope-SemiBold.ttf') format('truetype'); 
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Inter-Regular.ttf') format('truetype'); 
+ }
+ 
+ @font-face {
+   font-display: swap;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 500;
+   src: url('./fonts/Manrope-Medium.ttf') format('truetype'); 
+  }
+
+ @font-face {
+   font-display: swap;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 600;
+   src: url('./fonts/Inter-SemiBold.ttf') format('truetype'); 
+  }
