@@ -1,5 +1,5 @@
 
 
 export default function Home() {
-  return <div>Home</div>;
+  return <div>Looking for a vehicle? You’re at the right place.</div>;
 }

@@ -5,11 +5,14 @@ import {
   CarModelInfo,
   CarModelPrice,
   CardWrapper,
+  FavoriteToggle,
+  IconFavorite,
   Img,
   Information,
   Price,
   Thumb,
 } from './ItemCar.styled';
+import sprite from '../../images/icons.svg';
 
 export const ItemCar = ({ item }) => {
   const {
@@ -21,15 +24,20 @@ export const ItemCar = ({ item }) => {
     address,
     rentalCompany,
     img,
-    type
+    type,
   } = item;
-  console.log(make);
+  // console.log(make);
   return (
     <li>
       <CardWrapper>
         <Thumb>
           <Img src={img} alt={`${make} - ${model}`} />
         </Thumb>
+        <FavoriteToggle>
+          <IconFavorite>
+            <use xlinkHref={`${sprite}#icon-favorite`}></use>
+          </IconFavorite>
+        </FavoriteToggle>
         <CarModelPrice>
           <CarModelInfo>
             {make} <CarModel>{model}</CarModel>, {year}

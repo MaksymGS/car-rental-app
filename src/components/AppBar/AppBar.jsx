@@ -1,10 +1,12 @@
-
+import { SearchBar } from './AppBar.styled';
+import { SearchByModels } from './SearchByModels/SearchByModels';
+import { SearchByPrice } from './SearchByPrice/SearchByPrice';
 
 export const AppBar = () => {
- 
   return (
-    <header>
-      Include Inputs
-    </header>
+    <SearchBar>
+      <SearchByModels />
+      <SearchByPrice />
+    </SearchBar>
   );
 };

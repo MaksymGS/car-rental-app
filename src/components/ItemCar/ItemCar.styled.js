@@ -2,6 +2,34 @@ import styled from 'styled-components';
 
 export const CardWrapper = styled.div`
   width: 274px;
+  position: relative;
+`;
+export const FavoriteToggle = styled.button`
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  position: absolute;
+  top: 14px;
+  right: 14px;
+`;
+
+export const IconFavorite = styled.svg`
+  width: 18px;
+  height: 18px;
+
+  fill: transparent;
+  stroke-width: 1.5px;
+  stroke: rgba(255, 255, 255, 0.8);
+  /* opacity: 1; */
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    stroke: #3470ff;
+    fill: #3470ff;
+  }
 `;
 export const Thumb = styled.div`
   width: 100%;
@@ -10,6 +38,7 @@ export const Thumb = styled.div`
   overflow: hidden;
   margin-bottom: 14px;
 `;
+
 export const Img = styled.img`
   height: 100%;
   width: 100%;
@@ -26,6 +55,8 @@ export const CarModelInfo = styled.h3`
   font-size: 16px;
   line-height: 1.5;
   color: #121417;
+  /* white-space: nowrap;
+  text-overflow: hidden; */
 `;
 export const CarModel = styled.span`
   color: #3470ff;
