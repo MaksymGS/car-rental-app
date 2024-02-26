@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/car-rental-app/static/css/main.0d0b4220.css",
-    "main.js": "/car-rental-app/static/js/main.037b9357.js",
+    "main.js": "/car-rental-app/static/js/main.9555c144.js",
     "static/media/Inter-SemiBold.ttf": "/car-rental-app/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
     "static/media/Inter-Regular.ttf": "/car-rental-app/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
     "static/media/Manrope-SemiBold.ttf": "/car-rental-app/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
@@ -10,10 +10,10 @@
     "index.html": "/car-rental-app/index.html",
     "static/media/icons.svg": "/car-rental-app/static/media/icons.d5b26747de646e0047d828f5ba90022f.svg",
     "main.0d0b4220.css.map": "/car-rental-app/static/css/main.0d0b4220.css.map",
-    "main.037b9357.js.map": "/car-rental-app/static/js/main.037b9357.js.map"
+    "main.9555c144.js.map": "/car-rental-app/static/js/main.9555c144.js.map"
   },
   "entrypoints": [
     "static/css/main.0d0b4220.css",
-    "static/js/main.037b9357.js"
+    "static/js/main.9555c144.js"
   ]
 }
