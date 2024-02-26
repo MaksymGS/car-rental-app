@@ -1,5 +1,9 @@
-
+import { FavoriteList } from 'components/Favorite/FavoriteList';
 
 export default function Favorites() {
-    return <div>Favorites</div>;
-  }
+  return (
+    <>
+      <FavoriteList />
+    </>
+  );
+}

@@ -16,6 +16,8 @@ import sprite from '../../images/icons.svg';
 import Modal from 'react-modal';
 import { ModalDetails } from 'components/Modal/ModalDetails';
 import '../Modal/ModalDetail.css';
+import { useDispatch } from 'react-redux';
+import { addFavorite } from '../../redux/favoriteSlice.js';
 
 Modal.setAppElement('#root');
 
@@ -40,14 +42,17 @@ export const ItemCar = ({ item }) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
+  const dispatch = useDispatch();
+  const handleAddFavorite = () => {
+    dispatch(addFavorite(item));
+  };
   return (
     <li>
       <CardWrapper>
         <Thumb>
           <Img src={img} alt={`${make} - ${model}`} />
         </Thumb>
-        <FavoriteToggle>
+        <FavoriteToggle onClick={handleAddFavorite}>
           <IconFavorite>
             <use xlinkHref={`${sprite}#icon-favorite`}></use>
           </IconFavorite>
