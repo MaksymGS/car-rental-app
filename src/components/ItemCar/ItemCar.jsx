@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   CarModel,
@@ -13,6 +13,11 @@ import {
   Thumb,
 } from './ItemCar.styled';
 import sprite from '../../images/icons.svg';
+import Modal from 'react-modal';
+import { ModalDetails } from 'components/Modal/ModalDetails';
+import '../Modal/ModalDetail.css';
+
+Modal.setAppElement('#root');
 
 export const ItemCar = ({ item }) => {
   const {
@@ -26,7 +31,16 @@ export const ItemCar = ({ item }) => {
     img,
     type,
   } = item;
-  // console.log(make);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <li>
       <CardWrapper>
@@ -48,7 +62,17 @@ export const ItemCar = ({ item }) => {
           {address.split(',', 3).slice(1, 2)} | {address.split(',', 3).slice(2)}{' '}
           | {rentalCompany} | {type} | {model} | {id}
         </Information>
-        <Button>Learn more</Button>
+        <Button onClick={openModal}>Learn more</Button>
+
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          overlayClassName={'modal-overlay'}
+          className={'modal-content'}
+          closeTimeoutMS={300}
+        >
+          <ModalDetails onCloseModal={closeModal} carDetail={item} />
+        </Modal>
       </CardWrapper>
     </li>
   );
