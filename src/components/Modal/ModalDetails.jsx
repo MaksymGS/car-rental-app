@@ -22,9 +22,7 @@ export const ModalDetails = ({ onCloseModal, carDetail }) => {
     make,
     model,
     year,
-    rentalPrice,
     address,
-    rentalCompany,
     img,
     type,
     fuelConsumption,
@@ -32,7 +30,7 @@ export const ModalDetails = ({ onCloseModal, carDetail }) => {
     description,
     accessories,
     functionalities,
-    rentalConditions
+    rentalConditions,
   } = carDetail;
   return (
     <ModalWrapper>
@@ -60,9 +58,7 @@ export const ModalDetails = ({ onCloseModal, carDetail }) => {
           {accessories.map(item => item + ' | ')}
         </AccessoriesDescr>
         <Accessories>Rental Conditions: </Accessories>
-        <AccessoriesDescr>
-          {rentalConditions}
-        </AccessoriesDescr>
+        <AccessoriesDescr>{rentalConditions}</AccessoriesDescr>
         <Button>Rental car</Button>
       </InfoWrapper>
     </ModalWrapper>
